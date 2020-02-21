@@ -1,5 +1,6 @@
 using System;
 using Xunit;
+using BlogPlatform.Controllers;
 
 namespace BlogPlatform.Tests
 {
