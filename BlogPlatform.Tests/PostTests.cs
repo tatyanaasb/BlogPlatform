@@ -21,5 +21,13 @@ namespace BlogPlatform.Tests
 
             Assert.Equal("Post Name", result);
         }
+
+        [Fact]
+        public void Post_Body_Is_BodyText()
+        {
+            var result = model.Body;
+
+            Assert.Equal("Body Text", result);
+        }
     }
 }
