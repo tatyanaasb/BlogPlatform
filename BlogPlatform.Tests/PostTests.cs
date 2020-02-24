@@ -29,5 +29,13 @@ namespace BlogPlatform.Tests
 
             Assert.Equal("Body Text", result);
         }
+
+        [Fact]
+        public void Post_Author_Is_Author()
+        {
+            var result = model.Author;
+
+            Assert.Equal("Author", result);
+        }
     }
 }
