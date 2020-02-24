@@ -37,5 +37,13 @@ namespace BlogPlatform.Tests
 
             Assert.Equal("Author", result);
         }
+
+        [Fact]
+        public void Post_DateTime_Is_2011_06_10()
+        {
+            var result = model.PublishDate;
+
+            Assert.Equal(model.PublishDate, result);
+        }
     }
 }
