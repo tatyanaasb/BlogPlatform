@@ -12,6 +12,8 @@ namespace BlogPlatform
     public class BlogContext : DbContext
     {
         public DbSet<Post> Posts { get; set; }
+        public DbSet<Category> Categories { get; set; }
+        public DbSet<Tag> Tags { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
