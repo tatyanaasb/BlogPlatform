@@ -6,31 +6,29 @@ using Microsoft.AspNetCore.Mvc;
 using BlogPlatform.Models;
 using BlogPlatform.Repositories;
 
-
 namespace BlogPlatform.Controllers
 {
-    public class CategoryController : Controller
+    public class TagController : Controller
     {
-        IRepository<Category> categoryRepo;
+        IRepository<Tag> tagRepo;
 
-        public CategoryController(IRepository<Category> categoryRepo)
+        public TagController(IRepository<Tag> tagRepo)
         {
-            this.categoryRepo = categoryRepo;
+            this.tagRepo = tagRepo;
         }
 
         public ViewResult Index()
         {
-            var model = categoryRepo.GetAll();
+            var model = tagRepo.GetAll();
 
             return View(model);
         }
 
         public ViewResult Details(int id)
         {
-            Category model = categoryRepo.GetById(id);
+            Tag model = tagRepo.GetById(id);
 
             return View(model);
         }
-
     }
 }
