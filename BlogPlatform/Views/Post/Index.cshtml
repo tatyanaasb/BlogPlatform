@@ -13,12 +13,14 @@
 <body>
     <h3>Hobby Posts</h3>
 
-    @foreach(var post in Model)
+    @foreach (var post in Model)
     {
         <p>Posted By: @post.Author</p>
         <p>Title: @post.Title</p>
         <p>Body: @post.Body</p>
         <p>Published On @post.PublishDate</p>
     }
+
+    <a href="/Home/Index"><button>Return Home</button></a>
 </body>
 </html>
