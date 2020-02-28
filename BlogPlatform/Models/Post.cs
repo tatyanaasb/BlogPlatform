@@ -8,9 +8,9 @@ namespace BlogPlatform.Models
     public class Post
     {
         public int Id { get; set; }
+        public string Author { get; set; }
         public string Title { get; set; }
         public string Body { get; set; }
-        public string Author { get; set; }
         public DateTime PublishDate { get; set; }
 
 
@@ -18,12 +18,12 @@ namespace BlogPlatform.Models
         {
         }
 
-        public Post(int id, string title, string body, string author, DateTime publishDate)
+        public Post(int id, string author, string title, string body, DateTime publishDate)
         {
             Id = id;
+            Author = author;
             Title = title;
             Body = body;
-            Author = author;
             PublishDate = publishDate;
         }
     }

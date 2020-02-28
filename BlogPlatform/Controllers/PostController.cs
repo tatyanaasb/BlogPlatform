@@ -12,16 +12,33 @@ namespace BlogPlatform.Controllers
     {
         IRepository<Post> postRepo;
 
+        //public PostController()
+        //{
+        //}
+
         public PostController(IRepository<Post> postRepo)
         {
             this.postRepo = postRepo;
         }
-        
-        public ViewResult Index(string title)
+
+        public ViewResult Index()
         {
-            var model = new Post();
-            model.Title = title;
+            var model = postRepo.GetAll();
+
             return View(model);
+        }
+
+        //public ViewResult Index(string title)
+        //{
+        //    var model = new Post();
+        //    model.Title = title;
+        //    return View(model);
+        //}
+        
+        [HttpGet]
+        public ViewResult Create()
+        {
+            return View();
         }
     }
 }

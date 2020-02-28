@@ -10,16 +10,16 @@ namespace BlogPlatform.Tests
 {
     public class PostControllerTests
     {
-        [Fact]
-        public void Index_Sets_Title_On_Model()
-        {
-            var expectedTitle = "Title String";
-            var controller = new PostController();
+        //[Fact]
+        //public void Index_Sets_Title_On_Model()
+        //{
+        //    var expectedTitle = "Title String";
+        //    var controller = new PostController();
 
-            var result = controller.Index(expectedTitle);
+        //    var result = controller.Index(expectedTitle);
 
-            var model = (Post)result.Model;
-            Assert.Equal(expectedTitle, model.Title);
-        }
+        //    var model = (Post)result.Model;
+        //    Assert.Equal(expectedTitle, model.Title);
+        //}
     }
 }

@@ -1,0 +1,25 @@
+﻿@model IEnumerable<BlogPlatform.Models.Post>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Blog Posts</title>
+</head>
+<body>
+    <h3>Hobby Posts</h3>
+
+    @foreach(var post in Model)
+    {
+        <p>Id: @post.Id</p>
+        <p>Posted By: @post.Author</p>
+        <p>Title: @post.Title</p>
+        <p>Body: @post.Body</p>
+        <p>Published On @post.PublishDate</p>
+    }
+</body>
+</html>
