@@ -10,18 +10,13 @@ using BlogPlatform.Repositories;
 namespace BlogPlatform.Tests
 {
     public class CategoryControllerTests
-    {
-        CategoryController testController;
-        
-        public CategoryControllerTests()
-        {
-
-        }
-
+    {     
         [Fact]
         public void Index_Returns_ViewResult()
         {
-            var result = testController.Index();
+            var underTest = new HomeController();
+
+            var result = underTest.Index();
 
             Assert.IsType<ViewResult>(result);
         }
@@ -29,7 +24,9 @@ namespace BlogPlatform.Tests
         //[Fact]
         //public void Details_Returns_A_View()
         //{
-        //    var result = testController.Details(1);
+        //    var underTest = new HomeController();
+
+        //    var result = underTest.Details();
 
         //    Assert.IsType<ViewResult>(result);
         //}
