@@ -16,5 +16,14 @@ namespace BlogPlatform.Tests
 
             Assert.IsType<ViewResult>(result);
         }
+        [Fact]
+        public void Index_Passes_AllModels_To_View()
+        {
+            var underTest = new HomeController();
+
+            var result = underTest.Index();
+
+            Assert.IsAssignableFrom<HomeController>(result.Model);
+        }
     }
 }
