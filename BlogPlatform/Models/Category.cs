@@ -10,6 +10,8 @@ namespace BlogPlatform.Models
         public string Name { get; set; }
         public int Id { get; set; }
 
+        public virtual ICollection<Post> Posts { get; set; }
+
         public Category()
         {
         }

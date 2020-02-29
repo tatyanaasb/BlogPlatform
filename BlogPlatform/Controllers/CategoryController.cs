@@ -31,6 +31,5 @@ namespace BlogPlatform.Controllers
 
             return View(model);
         }
-
     }
 }
