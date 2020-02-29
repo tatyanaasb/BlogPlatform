@@ -1,0 +1,25 @@
+﻿* {
+    box-sizing: border-box;
+    line-height: 1.618em;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 14px;
+}
+
+body {
+    background-image:;
+
+}
+
+section {
+    background-color: #00ff21;
+    padding: 2.5em;
+    text-align: right;
+    border-radius: 25px;
+    /*font-family:;*/ 
+    border: 1px solid black;
+    margin: 2em;
+}
