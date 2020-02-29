@@ -28,17 +28,51 @@ namespace BlogPlatform.Controllers
             return View(model);
         }
 
-        //public ViewResult Index(string title)
-        //{
-        //    var model = new Post();
-        //    model.Title = title;
-        //    return View(model);
-        //}
-        
         [HttpGet]
         public ViewResult Create()
         {
             return View();
+        }
+
+        [HttpPost]
+        public ActionResult Create(Post post)
+        {
+            postRepo.Create(post);
+            return RedirectToAction("Index", "Post", new { id = post.Id });
+        }
+
+        [HttpGet]
+        public ViewResult Update(int id)
+        {
+            Post model = postRepo.GetById(id);
+
+            return View(model);
+        }
+
+        [HttpPost]
+        public ActionResult Update(Post post)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View();
+            }
+            postRepo.Update(post);
+
+            return RedirectToAction("Index", "Post", new { id = post.Id });
+        }
+        [HttpGet]
+        public ViewResult Delete(int id)
+        {
+            var model = postRepo.GetById(id);
+
+            return View(model);
+        }
+        [HttpPost]
+        public ActionResult Delete(Post post)
+        {
+            postRepo.Delete(post);
+
+            return RedirectToAction("Index");
         }
     }
 }
