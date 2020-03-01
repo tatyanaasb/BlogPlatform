@@ -1,5 +1,5 @@
 ﻿* {
-    box-sizing: border-box;
+    /*box-sizing: border-box;*/
     line-height: 1.618em;
     margin: 0;
     padding: 0;
@@ -10,9 +10,6 @@ html {
     font-size: 14px;
 }
 
-header {
-    margin-top: 0;
-}
 header,
 main,
 footer {
@@ -39,15 +36,16 @@ body {
     background: url(../image/img4_ink&pen_cropped.jpg);
     background-size: cover;
     opacity: .65;
+    border-radius: .8em;
     border-bottom: #555;
 }
 
 section {
-    background-color: rgba(175, 145, 81, 0.70);
+    background-color: rgba(144, 130, 119, 0.768);
     padding: 2.5em;
-    border-radius: 25px;
+    border-radius: .8em;
     /*font-family:;*/
-    border: 1px solid rgb(70, 69, 67);
+    border: .5px solid rgb(70, 69, 67);
     margin: 2em;
 }
 #welcomeAbout {
@@ -65,6 +63,7 @@ section {
 }
 button {
     background-color: lemonchiffon;
+    opacity: .65;
     border: 1px solid rgb(70, 69, 67);
     /*padding: 12px 28px;*/
     padding: 5px 9px;
@@ -74,7 +73,7 @@ button {
 #contact {
     text-align: center;
     margin: 2em 15em 2em 15em;
-    background-color: #908277db;
+    background-color: rgba(144, 130, 119, 0.768);
 }
 
 ul li {
