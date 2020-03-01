@@ -1,5 +1,5 @@
 ﻿* {
-    /*box-sizing: border-box;*/
+    box-sizing: border-box;
     line-height: 1.618em;
     margin: 0;
     padding: 0;
@@ -13,7 +13,7 @@ html {
 header,
 main,
 footer {
-    margin: 2em auto;
+    margin: 0 auto 2em auto;
     max-width: 750px;
 }
 
@@ -37,7 +37,8 @@ body {
     background-size: cover;
     opacity: .65;
     border-radius: .8em;
-    border-bottom: #555;
+    border: .5px solid rgb(191, 166, 126);
+    box-shadow: 0 0 20px black;
 }
 
 section {
@@ -45,7 +46,8 @@ section {
     padding: 2.5em;
     border-radius: .8em;
     /*font-family:;*/
-    border: .5px solid rgb(70, 69, 67);
+    border: .5px solid rgb(191, 166, 126);
+    box-shadow: 0 0 20px black;
     margin: 2em;
 }
 #welcomeAbout {
@@ -64,8 +66,8 @@ section {
 button {
     background-color: lemonchiffon;
     opacity: .65;
-    border: 1px solid rgb(70, 69, 67);
-    /*padding: 12px 28px;*/
+    border: .5px solid rgb(191, 166, 126);
+    box-shadow: inset 0 0 15px black;
     padding: 5px 9px;
     border-radius: .8em;
 }
@@ -74,6 +76,7 @@ button {
     text-align: center;
     margin: 2em 15em 2em 15em;
     background-color: rgba(144, 130, 119, 0.768);
+    box-shadow: 0 0 20px black;
 }
 
 ul li {
