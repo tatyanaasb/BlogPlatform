@@ -16,6 +16,10 @@ footer {
     max-width: 750px;
 }
 
+h1 {
+    color:burlywood;
+}
+
 body {
     background-image: url(../image/img1_journal.jfif);
     background-repeat: no-repeat;
@@ -26,9 +30,9 @@ body {
 
 .header-image {
     width: 100%;
-    height: 100px;
-    background: url(/image/img5_symbols.jfif);
-    background-size: contain;
+    height: 75px;
+    background: url(../image/img6_symbols_cropped.jpg);
+    background-size: cover;
     opacity: .5;
     border-bottom: #555;
 }
