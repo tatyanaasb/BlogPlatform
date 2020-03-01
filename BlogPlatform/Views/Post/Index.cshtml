@@ -13,13 +13,12 @@
 <body>
     <h3>Hobby Posts</h3>
 
-    @foreach (var post in Model)
+    @foreach (var post in Model.ToList())
     {
         <p>Posted By: @post.Author</p>
         <p>Title: @post.Title</p>
         <p>Body: @post.Body</p>
-        // Currently attempting to get CategoryName to work...
-        <p>Category:@post.CategoryId</p>
+        <p>Category: @post.Category.Name</p>
         <p>Published On @post.PublishDate</p>
     }
 

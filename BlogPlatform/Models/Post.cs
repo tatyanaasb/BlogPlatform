@@ -2,14 +2,18 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.ComponentModel.DataAnnotations;
 
 namespace BlogPlatform.Models
 {
     public class Post
     {
         public int Id { get; set; }
+        [Required(ErrorMessage = "You must enter an Author name.")]
         public string Author { get; set; }
+        [Required(ErrorMessage = "You must enter a Post Title.")]
         public string Title { get; set; }
+        [Required(ErrorMessage = "You must enter Post Content.")]
         public string Body { get; set; }
         public DateTime PublishDate { get; set; }
 
