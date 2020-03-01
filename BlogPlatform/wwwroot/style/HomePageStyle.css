@@ -18,8 +18,15 @@ footer {
 }
 
 h1 {
+    font-family: 'Merienda One';
+    font-size: 3em;
+    letter-spacing: 1px;
+    
     color: lemonchiffon;
-    padding: 1em 0em 1em 1.5em;
+    padding: .3em 0em 1em 1.5em;
+}
+p {
+    font-family: 'Marienda'
 }
 
 body {
@@ -38,7 +45,7 @@ body {
     opacity: .65;
     border-radius: .8em;
     border: .5px solid rgb(191, 166, 126);
-    box-shadow: 0 0 20px black;
+    box-shadow: inset 0 0 20px 4px black;
 }
 
 section {
@@ -47,7 +54,7 @@ section {
     border-radius: .8em;
     /*font-family:;*/
     border: .5px solid rgb(191, 166, 126);
-    box-shadow: 0 0 20px black;
+    box-shadow: inset 0 0 20px 0px black;
     margin: 2em;
 }
 #welcomeAbout {
@@ -76,7 +83,6 @@ button {
     text-align: center;
     margin: 2em 15em 2em 15em;
     background-color: rgba(144, 130, 119, 0.768);
-    box-shadow: 0 0 20px black;
 }
 
 ul li {
