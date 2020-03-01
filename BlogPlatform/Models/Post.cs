@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.ComponentModel.DataAnnotations;
 
 namespace BlogPlatform.Models
 {
@@ -14,6 +15,7 @@ namespace BlogPlatform.Models
         public DateTime PublishDate { get; set; }
 
         // Attempting 1-Many with Category:Post
+        //[Display(Name = "Select a Category: ")]
         public virtual Category Category { get; set; }
         public virtual int CategoryId { get; set; }
 
