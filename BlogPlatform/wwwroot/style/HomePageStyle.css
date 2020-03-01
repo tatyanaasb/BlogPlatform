@@ -3,6 +3,7 @@
     line-height: 1.618em;
     margin: 0;
     padding: 0;
+    color: rgb(70, 69, 67);
 }
 
 html {
@@ -20,12 +21,12 @@ footer {
 }
 
 h1 {
-    color: burlywood;
+    color: lemonchiffon;
     padding: 1em 0em 1em 1.5em;
 }
 
 body {
-    background-image: url(../image/img1_journal.jfif);
+    background-image: url(../image/img2_journal.jfif);
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
@@ -42,11 +43,11 @@ body {
 }
 
 section {
-    background-color: rgba(175, 145, 81, 0.5);
+    background-color: rgba(175, 145, 81, 0.70);
     padding: 2.5em;
     border-radius: 25px;
     /*font-family:;*/
-    border: 1px solid black;
+    border: 1px solid rgb(70, 69, 67);
     margin: 2em;
 }
 #welcomeAbout {
@@ -56,8 +57,24 @@ section {
     grid-column-gap: 1.25em;
     text-align: left;
 }
+#buttonsLayout {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-row-gap: 1.25em;
+}
+button {
+    background-color: lemonchiffon;
+    border: 1px solid rgb(70, 69, 67);
+    /*padding: 12px 28px;*/
+    padding: 5px 9px;
+    border-radius: .8em;
+}
+
 #contact {
     text-align: center;
+    margin: 2em 15em 2em 15em;
+    background-color: #908277db;
 }
 
 ul li {
