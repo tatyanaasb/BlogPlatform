@@ -9,17 +9,48 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Index</title>
+
+    <link href="~/style/HomePageStyle.css" rel="stylesheet" />
 </head>
 <body>
+    <header>
+        <div class="header-image">
+            <h1>Hobby Blogy</h1>
+        </div>    
+            <span>A blog for hobby lovers</span>
+</header>
 
-    <h1>Blog Home Page</h1>
-    <p>Welcome to our blog message here.</p>
-    
-    <div>
-        <a href="/Post/Index"><button>View All Posts</button></a>
-        <a href="/Category/Index"><button>View All by Category</button></a>
-        <a href="/Tag/Index"><button>View All by Tag</button></a>
-    </div>
+    <main>
+        <section id="welcomeAbout">
+            <article>
+                <p>
+                    Etiam nec pretium ligula, in iaculis est. Fusce dapibus iaculis laoreet. Duis vitae ante sed nibh tincidunt porta condimentum nec felis. Nam eget lacus a arcu tempor accumsan ac id mauris.
+                </p>
+            </article>
+            <article>
+                <div id="buttonsLayout">
+                    <a href="/Post/Index"><button>View All Posts</button></a>
+                    <a href="/Category/Index"><button>View All by Category</button></a>
+                    <a href="/Tag/Index"><button>View All by Tag</button></a>
+                </div>
+            </article>
+        </section>
+        <section id="contact">
+            <h3>Contact Us:</h3>
+            <ul>
+                <li>123 Nota Naddress, Emailinstead TY 45678</li>
+                <li>555-123-9876</li>
+                <li>hobbyblogy@@notrealemail.com</li>
+
+            </ul>
+        </section>    
+
+        
+
+    </main>
+    <footer>
+        <p>&copy;HobbyBlogy 2020</p>
+    </footer>
 
 </body>
 </html>
