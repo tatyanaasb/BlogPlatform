@@ -24,6 +24,7 @@
     <section id="postIndex">
         @foreach (var post in Model)
         {
+        <article>
             <p>Posted By: @post.Author</p>
             <p>Title: @post.Title</p>
             <p>Body: @post.Body</p>
@@ -31,16 +32,17 @@
             @*<p>Tags: @post.Tag.Name</p>*@
             <p>Published On @post.PublishDate</p>
             @*<ol>
-                @foreach (var tag in Model.TagPost)
-                {
-                    <li>
-                        @tag.Tag.Name
-                    </li>
-                }
-            </ol>*@
+            @foreach (var tag in Model.TagPost)
+            {
+                <li>
+                    @tag.Tag.Name
+                </li>
+            }
+        </ol>*@
             <a href="~/Post/Details/@post.Id">Details</a>
             <a href="~/Post/Update/@post.Id">Update Post</a>
             <a href="~/Post/Delete/@post.Id">Delete Post</a>
+        </article>
         }
 
         <a href="/Home/Index"><button class="button">Return Home</button></a>
