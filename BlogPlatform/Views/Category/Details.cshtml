@@ -1,4 +1,4 @@
-﻿@model IEnumerable<BlogPlatform.Models.Category>
+﻿@model BlogPlatform.Models.Category
 @{
     Layout = null;
 }
@@ -11,11 +11,15 @@
     <title>Details</title>
 </head>
 <body>
-    @foreach (var category in Model)
+    @foreach (var post in Model.Posts)
     {
-        <h3>@category.Name</h3>
-        
-        @*<a href="/Product/Details/@product.Id"><button id="detailsButton">Details</button></a>*@
+        <p>Posted By: @post.Author</p>
+        <p>Title: @post.Title</p>
+        <p>Body: @post.Body</p>
+        <p>Category: @post.Category.Name</p>
+        <p>Published On @post.PublishDate</p>
+        <a href="/Post/Update">Update Post</a>
+        <a href="/Post/Delete">Delete Post</a>
     }
 
 </body>

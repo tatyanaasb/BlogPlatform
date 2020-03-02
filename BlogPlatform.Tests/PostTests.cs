@@ -11,7 +11,7 @@ namespace BlogPlatform.Tests
 
         public PostTests()
         {
-            model = new Post(001, "Author", "Post Title", "Body Text",  new DateTime(2011, 6, 10));
+            model = new Post(001, "Author", "Post Title", "Body Text",  new DateTime(2011, 6, 10), 01, 01);
         }
 
         [Fact]

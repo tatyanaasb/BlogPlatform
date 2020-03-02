@@ -9,28 +9,40 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Details</title>
+    <link href="~/style/BlogStyle.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Merienda|Merienda+One|Oleo+Script+Swash+Caps|Satisfy&display=swap" rel="stylesheet">
+
 </head>
 <body>
+    <header>
+        <div class="header-image">
+            <h1>New Post</h1>
+        </div>
+    </header>
     <h1>Individual Post Details></h1>
 
-    @*@foreach (var post in Model.ToList())
-        {
-            <p>@post.Author</p>
-            <p>@post.Title</p>
-            <p>@post.Body</p>
-            <p>@post.Category.Name</p>
-            <p>Published On @post.PublishDate</p>
-        }*@
-    <ol>
-        @foreach (var tag in Model.TagPosts)
-        {
-            <li>
-                @tag.Tag.Name
-            </li>
-        }
-    </ol>
+    <section id="postIndex">
+        <article>
+            <p>@Model.Author</p>
+            <p>@Model.Title</p>
+            <p>@Model.Body</p>
+            <p>@Model.Category.Name</p>
+            <ol>
+                @foreach (var tag in Model.TagPosts)
+                {
 
+                    <li>
+                        @tag.Tag.Name
+                    </li>
 
-    <a href="/Home/Index"><button>Return Home</button></a>
+                }
+            </ol>
+        </article>
+
+        <a href="/Home/Index"><button class="button">Return Home</button></a>
+    </section>
+    <footer>
+        <p>&copy;HobbyBlogy 2020</p>
+    </footer>
 </body>
 </html>

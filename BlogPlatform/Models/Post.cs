@@ -20,6 +20,8 @@ namespace BlogPlatform.Models
         // Attempting 1-Many with Category:Post
         public virtual Category Category { get; set; }
         public virtual int CategoryId { get; set; }
+        public virtual Tag Tag { get; set; }
+        public virtual int TagId { get; set; }
 
         public virtual List<TagPost> TagPosts { get; set; }
 
@@ -27,16 +29,15 @@ namespace BlogPlatform.Models
         {
         }
 
-        public Post(int id, string author, string title, string body, DateTime publishDate)
+        public Post(int id, string author, string title, string body, DateTime publishDate, int categoryId, int tagId)
         {
             Id = id;
             Author = author;
             Title = title;
             Body = body;
             PublishDate = publishDate;
+            CategoryId = categoryId;
+            TagId = tagId;
         }
     }
-
-
-
 }
