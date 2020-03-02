@@ -9,14 +9,27 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Index</title>
+    <link href="~/style/BlogStyle.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Merienda|Merienda+One|Oleo+Script+Swash+Caps|Satisfy&display=swap" rel="stylesheet">
+
 </head>
 <body>
-    @foreach (var post in Model)
-    {
-        <p>@post.Name</p>
-        <a href="/Post/Index/@post.Id"> View Posts</a>
-    }
+    <header>
+        <div class="header-image">
+            <h1>Hobby Categories</h1>
+        </div>
 
-    <a href="/Home/Index"><button>Return Home</button></a>
+    </header>
+    <section id="categoryIndex">
+        @foreach (var category in Model)
+        {
+            <p>Category: @category.Name</p>
+        }
+
+        <a href="/Home/Index"><button class="button">Return Home</button></a>
+    </section>
+    <footer>
+        <p>&copy;HobbyBlogy 2020</p>
+    </footer>
 </body>
 </html>

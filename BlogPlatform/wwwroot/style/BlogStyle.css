@@ -13,7 +13,7 @@ html {
 header,
 main,
 footer {
-    margin: 0 auto 2em auto;
+    margin: 0 auto 1em auto;
     max-width: 750px;
 }
 
@@ -26,7 +26,12 @@ h1 {
 }
 
 article {
-    font-family: 'Marienda'
+    font-family: 'Marienda';
+    padding: 2em;
+    margin: 1.5em;
+    border-radius: .8em;
+    background-color: rgba(144, 130, 119, 0.768);
+    box-shadow: inset 0 0 10px 0px black;
 }
 
 body {
@@ -49,34 +54,24 @@ body {
     box-shadow: inset 0 0 20px 4px black;
 }
 
-section {
-    background-color: rgba(144, 130, 119, 0.768);
-    padding: 2em;
-    border-radius: .8em;
-    border: .5px solid rgb(191, 166, 126);
-    box-shadow: inset 0 0 10px 0px black;
-    margin: 2em;
-}
-
-p {
-    margin: 1.5em;
-}
-
-#welcomeAbout {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: auto;
-    grid-column-gap: 1.25em;
+#categoryIndex,
+#postIndex,
+#tagIndex {
+    font-family: 'Marienda';
     text-align: center;
+    margin: auto;
+    padding: 2em;
+    width: 600px;
 }
 
-#buttonsLayout {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-    grid-row-gap: 1.25em;
-    padding: 1.5em;
+#categoryIndex,
+#tagIndex {
+    border-radius: .8em;
+    background-color: rgba(144, 130, 119, 0.768);
+    box-shadow: inset 0 0 10px 0px black;
+    width: 400px;
 }
+
 
 button {
     width: 200px;
@@ -88,23 +83,11 @@ button {
     padding: 5px 9px;
     border-radius: .8em;
     cursor: pointer;
+    margin-top: 1em;
 }
 
 .button:hover {
     box-shadow: 0 0 3px 2px black;
-}
-
-#contact {
-    font-family: 'Marienda';
-    text-align: center;
-    margin: auto;
-    padding: 2em;
-    background-color: rgba(144, 130, 119, 0.768);
-    width: 450px;
-}
-
-ul li {
-    list-style: none;
 }
 
 footer {
