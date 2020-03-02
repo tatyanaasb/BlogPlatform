@@ -37,7 +37,7 @@ namespace BlogPlatform.Models
             Body = body;
             PublishDate = publishDate;
             CategoryId = categoryId;
-            TagId = tagId;
+            //TagId = tagId;
         }
     }
 }
