@@ -11,10 +11,11 @@
     <title>Index</title>
 </head>
 <body>
-    @foreach (var category in Model.ToList())
-        {
-            <p>Category: @category.Name</p>
-        }
+    @foreach (var post in Model)
+    {
+        <p>@post.Name</p>
+        <a href="/Post/Index/@post.Id"> View Posts</a>
+    }
 
     <a href="/Home/Index"><button>Return Home</button></a>
 </body>

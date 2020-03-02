@@ -11,6 +11,8 @@ namespace BlogPlatform.Models
         public int Id { get; set; }
 
         // Many-Many relationship with Post:Tag to be implemented here...
+        public virtual List<TagPost> TagPosts { get; set; }
+
         public Tag()
         {
         }
