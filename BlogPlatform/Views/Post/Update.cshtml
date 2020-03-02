@@ -18,7 +18,7 @@
 <body>
     <header>
         <div class="header-image">
-            <h1>New Post</h1>
+            <h1>Update Post</h1>
         </div>
     </header>
 
@@ -54,9 +54,9 @@
                             <span asp-validation-for="PublishDate" class="text-danger"></span>
                         </div>*@
                         <div class="form-group">
-                            <label asp-for="CategoryId" class="control-label"></label>
-                            @*<input asp-for="CategoryId" class="form-control" />
-                            <span asp-validation-for="CategoryId" class="text-danger"></span>*@
+                            @*<label asp-for="CategoryId" class="control-label"></label>*@
+                            <input asp-for="CategoryId" type="hidden" class="form-control" />
+                            <span asp-validation-for="CategoryId" class="text-danger"></span>
                         </div>
                         <div class="form-group">
                             <input type="submit" value="Save" class="btn btn-primary" />
