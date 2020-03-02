@@ -4,14 +4,16 @@ using BlogPlatform;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace BlogPlatform.Migrations
 {
     [DbContext(typeof(BlogContext))]
-    partial class BlogContextModelSnapshot : ModelSnapshot
+    [Migration("20200302140159_SecondMigration")]
+    partial class SecondMigration
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -98,9 +100,9 @@ namespace BlogPlatform.Migrations
                             Id = 1,
                             Author = "Nabil",
                             Body = "This is my bike riding story.",
-                            CategoryId = 0,
-                            PublishDate = new DateTime(2020, 3, 2, 9, 7, 4, 265, DateTimeKind.Local).AddTicks(3362),
-                            TagId = 0,
+                            CategoryId = 1,
+                            PublishDate = new DateTime(2020, 3, 2, 9, 1, 58, 754, DateTimeKind.Local).AddTicks(6563),
+                            TagId = 101,
                             Title = "My Bike Riding Hobby"
                         },
                         new
@@ -108,9 +110,9 @@ namespace BlogPlatform.Migrations
                             Id = 2,
                             Author = "Tatyana",
                             Body = "This is my photography story.",
-                            CategoryId = 0,
-                            PublishDate = new DateTime(2020, 3, 2, 9, 7, 4, 268, DateTimeKind.Local).AddTicks(3846),
-                            TagId = 0,
+                            CategoryId = 2,
+                            PublishDate = new DateTime(2020, 3, 2, 9, 1, 58, 758, DateTimeKind.Local).AddTicks(560),
+                            TagId = 201,
                             Title = "My Photography Hobby"
                         },
                         new
@@ -118,9 +120,9 @@ namespace BlogPlatform.Migrations
                             Id = 3,
                             Author = "Blogger",
                             Body = "This is a blogger's blog about blogging.",
-                            CategoryId = 0,
-                            PublishDate = new DateTime(2020, 3, 2, 9, 7, 4, 268, DateTimeKind.Local).AddTicks(3911),
-                            TagId = 0,
+                            CategoryId = 3,
+                            PublishDate = new DateTime(2020, 3, 2, 9, 1, 58, 758, DateTimeKind.Local).AddTicks(622),
+                            TagId = 301,
                             Title = "My Blogging Hobby"
                         },
                         new
@@ -128,9 +130,9 @@ namespace BlogPlatform.Migrations
                             Id = 4,
                             Author = "Jeremy",
                             Body = "This is a blog about movies",
-                            CategoryId = 0,
-                            PublishDate = new DateTime(2020, 3, 2, 9, 7, 4, 268, DateTimeKind.Local).AddTicks(3918),
-                            TagId = 0,
+                            CategoryId = 4,
+                            PublishDate = new DateTime(2020, 3, 2, 9, 1, 58, 758, DateTimeKind.Local).AddTicks(629),
+                            TagId = 401,
                             Title = "All About Movies"
                         });
                 });

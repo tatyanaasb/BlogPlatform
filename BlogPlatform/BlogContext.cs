@@ -35,8 +35,8 @@ namespace BlogPlatform
                     Body = "This is my bike riding story.",
                     Author = "Nabil",
                     PublishDate = DateTime.Now,
-                    CategoryId = 01,
-                    TagId = 101
+                    //CategoryId = 01,
+                    //TagId = 101
                 },
 
                 new Post()
@@ -46,8 +46,8 @@ namespace BlogPlatform
                     Body = "This is my photography story.",
                     Author = "Tatyana",
                     PublishDate = DateTime.Now,
-                    CategoryId = 02,
-                    TagId = 201
+                    //CategoryId = 02,
+                    //TagId = 201
                 },
 
                 new Post()
@@ -57,8 +57,8 @@ namespace BlogPlatform
                     Body = "This is a blogger's blog about blogging.",
                     Author = "Blogger",
                     PublishDate = DateTime.Now,
-                    CategoryId = 03,
-                    TagId = 301
+                    //CategoryId = 03,
+                    //TagId = 301
                 },
 
                 new Post()
@@ -68,8 +68,8 @@ namespace BlogPlatform
                     Body = "This is a blog about movies",
                     Author = "Jeremy",
                     PublishDate = DateTime.Now,
-                    CategoryId = 04,
-                    TagId = 401
+                    //CategoryId = 04,
+                    //TagId = 401
                 });
 
             modelBuilder.Entity<Category>().HasData(
