@@ -11,23 +11,15 @@ namespace BlogPlatform.Tests
 
         public PostTests()
         {
-            model = new Post(001, "Post Name", "Body Text", "Author", new DateTime(2011, 6, 10));
+            model = new Post(001, "Author", "Post Title", "Body Text",  new DateTime(2011, 6, 10), 01, 01);
         }
 
         [Fact]
-        public void Post_Title_Is_PostName()
+        public void Post_Id_Is_Id()
         {
-            var result = model.Title;
+            var result = model.Id;
 
-            Assert.Equal("Post Name", result);
-        }
-
-        [Fact]
-        public void Post_Body_Is_BodyText()
-        {
-            var result = model.Body;
-
-            Assert.Equal("Body Text", result);
+            Assert.Equal(001, result);
         }
 
         [Fact]
@@ -36,6 +28,22 @@ namespace BlogPlatform.Tests
             var result = model.Author;
 
             Assert.Equal("Author", result);
+        }
+
+        [Fact]
+        public void Post_Title_Is_PostTitle()
+        {
+            var result = model.Title;
+
+            Assert.Equal("Post Title", result);
+        }
+
+        [Fact]
+        public void Post_Body_Is_BodyText()
+        {
+            var result = model.Body;
+
+            Assert.Equal("Body Text", result);
         }
 
         [Fact]

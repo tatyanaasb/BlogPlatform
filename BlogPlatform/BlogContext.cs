@@ -8,12 +8,12 @@ using Microsoft.EntityFrameworkCore;
 
 namespace BlogPlatform
 {
-
     public class BlogContext : DbContext
     {
         public DbSet<Post> Posts { get; set; }
         public DbSet<Category> Categories { get; set; }
         public DbSet<Tag> Tags { get; set; }
+        public DbSet<TagPost> TagPosts { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -36,6 +36,7 @@ namespace BlogPlatform
                     Author = "Nabil",
                     PublishDate = DateTime.Now,
                     CategoryId = 01
+                    //TagId = 101
                 },
 
                 new Post()
@@ -46,6 +47,7 @@ namespace BlogPlatform
                     Author = "Tatyana",
                     PublishDate = DateTime.Now,
                     CategoryId = 02
+                    //TagId = 201
                 },
 
                 new Post()
@@ -56,6 +58,7 @@ namespace BlogPlatform
                     Author = "Blogger",
                     PublishDate = DateTime.Now,
                     CategoryId = 03
+                    //TagId = 301
                 },
 
                 new Post()
@@ -66,6 +69,7 @@ namespace BlogPlatform
                     Author = "Jeremy",
                     PublishDate = DateTime.Now,
                     CategoryId = 04
+                    //TagId = 401
                 });
 
             modelBuilder.Entity<Category>().HasData(
@@ -157,9 +161,80 @@ namespace BlogPlatform
                     Id = 403,
                     Name = "filmmaking"
                 });
-
+            modelBuilder.Entity<TagPost>().HasData(
+                new TagPost()
+                {
+                    Id = 1,
+                    PostId = 001,
+                    TagId = 101
+                },
+                new TagPost()
+                {
+                    Id = 2,
+                    PostId = 001,
+                    TagId = 102
+                },
+                new TagPost()
+                {
+                    Id = 3,
+                    PostId = 001,
+                    TagId = 103
+                },
+                new TagPost()
+                {
+                    Id = 4,
+                    PostId = 002,
+                    TagId = 201
+                },
+                new TagPost()
+                {
+                    Id = 5,
+                    PostId = 002,
+                    TagId = 202
+                },
+                new TagPost()
+                {
+                    Id = 6,
+                    PostId = 002,
+                    TagId = 203
+                },
+                new TagPost()
+                {
+                    Id = 7,
+                    PostId = 003,
+                    TagId = 301
+                },
+                new TagPost()
+                {
+                    Id = 8,
+                    PostId = 003,
+                    TagId = 302
+                },
+                new TagPost()
+                {
+                    Id = 9,
+                    PostId = 003,
+                    TagId = 303
+                },
+                new TagPost()
+                {
+                    Id = 10,
+                    PostId = 004,
+                    TagId = 401
+                },
+                new TagPost()
+                {
+                    Id = 11,
+                    PostId = 004,
+                    TagId = 402
+                },
+                new TagPost()
+                {
+                    Id = 12,
+                    PostId = 004,
+                    TagId = 403
+                });
             base.OnModelCreating(modelBuilder);
         }
     }
-    
 }

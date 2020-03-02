@@ -9,20 +9,44 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Blog Posts</title>
+    <link href="~/style/BlogStyle.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Merienda|Merienda+One|Oleo+Script+Swash+Caps|Satisfy&display=swap" rel="stylesheet">
+
 </head>
 <body>
-    <h3>Hobby Posts</h3>
+    <header>
+        <div class="header-image">
+            <h1>Hobby Posts</h1>
+        </div>
 
-    @foreach (var post in Model)
-    {
-        <p>Posted By: @post.Author</p>
-        <p>Title: @post.Title</p>
-        <p>Body: @post.Body</p>
-        // Currently attempting to get CategoryName to work...
-        <p>Category:@post.CategoryId</p>
-        <p>Published On @post.PublishDate</p>
-    }
+    </header>
 
-    <a href="/Home/Index"><button>Return Home</button></a>
+    <section id="postIndex">
+        @foreach (var post in Model)
+        {
+            <p>Posted By: @post.Author</p>
+            <p>Title: @post.Title</p>
+            <p>Body: @post.Body</p>
+            <p>Category: @post.Category.Name</p>
+            @*<p>Tags: @post.Tag.Name</p>*@
+            <p>Published On @post.PublishDate</p>
+            @*<ol>
+                @foreach (var tag in Model.TagPost)
+                {
+                    <li>
+                        @tag.Tag.Name
+                    </li>
+                }
+            </ol>*@
+            <a href="~/Post/Details/@post.Id">Details</a>
+            <a href="/Post/Update">Update Post</a>
+            <a href="/Post/Delete">Delete Post</a>
+        }
+
+        <a href="/Home/Index"><button class="button">Return Home</button></a>
+    </section>
+    <footer>
+        <p>&copy;HobbyBlogy 2020</p>
+    </footer>
 </body>
 </html>

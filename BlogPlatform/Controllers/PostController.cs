@@ -19,7 +19,14 @@ namespace BlogPlatform.Controllers
 
         public ViewResult Index()
         {
-            var model = postRepo.GetAll();
+            var model = postRepo.GetAll().ToList();
+
+            return View(model);
+        }
+
+        public ViewResult Details(int id)
+        {
+            var model = postRepo.GetById(id);
 
             return View(model);
         }
@@ -33,6 +40,10 @@ namespace BlogPlatform.Controllers
         [HttpPost]
         public ActionResult Create(Post post)
         {
+            if (!ModelState.IsValid)
+            {
+                return View();
+            }
             postRepo.Create(post);
             return RedirectToAction("Index", "Post", new { id = post.Id });
         }
@@ -48,6 +59,10 @@ namespace BlogPlatform.Controllers
         [HttpPost]
         public ActionResult Update(Post post)
         {
+            if (!ModelState.IsValid)
+            {
+                return View();
+            }
             postRepo.Update(post);
 
             return RedirectToAction("Index", "Post", new { id = post.Id });
