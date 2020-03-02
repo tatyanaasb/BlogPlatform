@@ -22,15 +22,25 @@
     </header>
 
     <section id="postIndex">
-        @foreach (var post in Model.ToList())
+        @foreach (var post in Model)
         {
-            <article>
-                <p>Posted By: @post.Author</p>
-                <p>Title: @post.Title</p>
-                <p>Body: @post.Body</p>
-                <p>Category: @post.Category.Name</p>
-                <p>Published On @post.PublishDate</p>
-            </article>
+            <p>Posted By: @post.Author</p>
+            <p>Title: @post.Title</p>
+            <p>Body: @post.Body</p>
+            <p>Category: @post.Category.Name</p>
+            <p>Tags: @post.Tag.Name</p>
+            <p>Published On @post.PublishDate</p>
+            @*<ol>
+                @foreach (var tag in Model.TagPost)
+                {
+                    <li>
+                        @tag.Tag.Name
+                    </li>
+                }
+            </ol>*@
+            <a href="~/Post/Details/@post.Id">Details</a>
+            <a href="/Post/Update">Update Post</a>
+            <a href="/Post/Delete">Delete Post</a>
         }
 
         <a href="/Home/Index"><button class="button">Return Home</button></a>

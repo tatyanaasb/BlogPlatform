@@ -1,4 +1,5 @@
 ﻿@model IEnumerable<BlogPlatform.Models.Tag>
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 @{
     Layout = null;
 }
@@ -8,14 +9,29 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
+    <title>View Posts by Tag</title>
+    <link href="~/style/BlogStyle.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Merienda|Merienda+One|Oleo+Script+Swash+Caps|Satisfy&display=swap" rel="stylesheet">
+
 </head>
 <body>
-    @foreach (var tag in Model)
-    {
-        <p>Tag: @tag.Name</p>
-    }
+    <header>
+        <div class="header-image">
+            <h1>Hobby Tags</h1>
+        </div>
 
-    <a href="/Home/Index"><button>Return Home</button></a>
+    </header>
+    <section id="categoryIndex">
+        @foreach (var tag in Model)
+        {
+            <p>@tag.Name</p>
+            <a href="/Category/Details/@tag.Id">Posts</a>
+        }
+
+        <a href="/Home/Index"><button class="button">Return Home</button></a>
+    </section>
+    <footer>
+        <p>&copy;HobbyBlogy 2020</p>
+    </footer>
 </body>
 </html>
