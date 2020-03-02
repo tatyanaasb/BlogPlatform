@@ -11,61 +11,71 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Create</title>
+    <link href="~/style/FormStyle.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Merienda|Merienda+One|Oleo+Script+Swash+Caps|Satisfy&display=swap" rel="stylesheet">
+
 </head>
 <body>
-
-    <h4>Post</h4>
-    <hr />
-    <div class="row">
-        <div class="col-md-4">
-            <form asp-action="Create">
-                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-                @*<div class="form-group">
-                    <label asp-for="Id" class="control-label"></label>
-                    <input asp-for="Id" class="form-control" />
-                    <span asp-validation-for="Id" class="text-danger"></span>
-                </div>*@
-                <div class="form-group">
-                    <label asp-for="Author" class="control-label"></label>
-                    <input asp-for="Author" class="form-control" />
-                    <span asp-validation-for="Author" class="text-danger"></span>
-                </div>
-                <div class="form-group">
-                    <label asp-for="Title" class="control-label"></label>
-                    <input asp-for="Title" class="form-control" />
-                    <span asp-validation-for="Title" class="text-danger"></span>
-                </div>
-                <div class="form-group">
-                    <label asp-for="Body" class="control-label"></label>
-                    <input asp-for="Body" class="form-control" />
-                    <span asp-validation-for="Body" class="text-danger"></span>
-                </div>
-                @*<div class="form-group">
-                    <label asp-for="PublishDate" class="control-label"></label>
-                    <input asp-for="PublishDate" class="form-control" />
-                    <span asp-validation-for="PublishDate" class="text-danger"></span>
-                </div>*@
-                <div class="form-group">
-                    <label asp-for="CategoryId" class="control-label">Select a Category </label>
-                    @*<input asp-for="CategoryId" class="form-control" />
-                    <span asp-validation-for="CategoryId" class="text-danger"></span>*@
-                <select name="CategoryId">
-                    <option value="01">Bike Riding</option>
-                    <option value="02">Photography</option>
-                    <option value="03">Blogging</option>
-                    <option value="04">Movies</option>
-                </select>
-                </div>
-                <div class="form-group">
-                    <input type="submit" value="Create" class="btn btn-primary" />
-                </div>
-            </form>
+    <header>
+        <div class="header-image">
+            <h1>New Post</h1>
         </div>
-    </div>
+    </header>
 
-    <div>
-        <a href="/Home/Index"><button>Return Home</button></a>
-    </div>
+    <section id="form">
+        <article>
+            <div class="row">
+                <div class="col-md-4">
+                    <form asp-action="Create">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        @*<div class="form-group">
+                        <label asp-for="Id" class="control-label"></label>
+                        <input asp-for="Id" class="form-control" />
+                        <span asp-validation-for="Id" class="text-danger"></span>
+                    </div>*@
+                        <div class="form-group">
+                            <label asp-for="Author" class="control-label"></label>
+                            <input asp-for="Author" class="form-control" />
+                            <span asp-validation-for="Author" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Title" class="control-label"></label>
+                            <input asp-for="Title" class="form-control" />
+                            <span asp-validation-for="Title" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Body" class="control-label"></label>
+                            <input asp-for="Body" class="form-control" />
+                            <span asp-validation-for="Body" class="text-danger"></span>
+                        </div>
+                        @*<div class="form-group">
+                        <label asp-for="PublishDate" class="control-label"></label>
+                        <input asp-for="PublishDate" class="form-control" />
+                        <span asp-validation-for="PublishDate" class="text-danger"></span>
+                    </div>*@
+                        <div class="form-group">
+                            <label asp-for="CategoryId" class="control-label">Select a Category </label>
+                            @*<input asp-for="CategoryId" class="form-control" />
+                        <span asp-validation-for="CategoryId" class="text-danger"></span>*@
+                            <select name="CategoryId">
+                                <option value="01">Bike Riding</option>
+                                <option value="02">Photography</option>
+                                <option value="03">Blogging</option>
+                                <option value="04">Movies</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <input id="button" type="submit" value="Create New Post" class="btn btn-primary" />
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div>
+                <a href="/Home/Index"><button class="button">Return Home</button></a>
+            </div>
+        </article>
+    </section>
 
 </body>
 </html>
