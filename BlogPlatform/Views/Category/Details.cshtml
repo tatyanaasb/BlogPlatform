@@ -8,29 +8,36 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>Details</title>
+    <title>Posts by Category</title>
+    <link href="~/style/BlogStyle.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Merienda|Merienda+One|Oleo+Script+Swash+Caps|Satisfy&display=swap" rel="stylesheet">
+
 </head>
 <body>
-    @foreach (var post in Model.Posts)
-    {
-        <p>Posted By: @post.Author</p>
-        <p>Title: @post.Title</p>
-        <p>Body: @post.Body</p>
-        <p>Category: @post.Category.Name</p>
-        @*<p>Tags: @post.Tag.Name</p>*@
-        <p>Published On @post.PublishDate</p>
-        @*<ol>
-                @foreach (var tag in Model.TagPost)
-                {
-                    <li>
-                        @tag.Tag.Name
-                    </li>
-                }
-            </ol>*@
-        <a href="~/Post/Details/@post.Id">Details</a>
-        <a href="/Post/Update">Update Post</a>
-        <a href="/Post/Delete">Delete Post</a>
-    }
+    <section id="postIndex">
+        @foreach (var post in Model.Posts)
+        {
+            <article>
+                <p>Posted By: @post.Author</p>
+                <p>Title: @post.Title</p>
+                <p>Body: @post.Body</p>
+                <p>Category: @post.Category.Name</p>
+                @*<p>Tags: @post.Tag.Name</p>*@
+                <p>Published On @post.PublishDate</p>
+                @*<ol>
+                    @foreach (var tag in Model.TagPost)
+                    {
+                        <li>
+                            @tag.Tag.Name
+                        </li>
+                    }
+                </ol>*@
+                <a href="~/Post/Details/@post.Id">Details</a>
+                <a href="/Post/Update">Update Post</a>
+                <a href="/Post/Delete">Delete Post</a>
+            </article>
+        }
+    </section>
 
 </body>
 </html>
