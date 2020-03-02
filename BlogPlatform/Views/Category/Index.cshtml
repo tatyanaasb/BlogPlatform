@@ -11,7 +11,7 @@
     <title>Index</title>
 </head>
 <body>
-    @foreach (var category in Model)
+    @foreach (var category in Model.ToList())
         {
             <p>Category: @category.Name</p>
         }

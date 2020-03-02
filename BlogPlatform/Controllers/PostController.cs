@@ -24,6 +24,13 @@ namespace BlogPlatform.Controllers
             return View(model);
         }
 
+        public ViewResult Details(int id)
+        {
+            var model = postRepo.GetById(id);
+
+            return View(model);
+        }
+
         [HttpGet]
         public ViewResult Create()
         {

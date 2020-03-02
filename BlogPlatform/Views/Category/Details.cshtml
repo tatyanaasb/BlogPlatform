@@ -1,0 +1,22 @@
+﻿@model IEnumerable<BlogPlatform.Models.Category>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    @foreach (var category in Model)
+    {
+        <h3>@category.Name</h3>
+        
+        @*<a href="/Product/Details/@product.Id"><button id="detailsButton">Details</button></a>*@
+    }
+
+</body>
+</html>
