@@ -19,7 +19,7 @@ namespace BlogPlatform.Controllers
 
         public ViewResult Index()
         {
-            var model = postRepo.GetAll();
+            var model = postRepo.GetAll().ToList();
 
             return View(model);
         }

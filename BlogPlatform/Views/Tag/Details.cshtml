@@ -11,14 +11,14 @@
     <title>Details</title>
 </head>
 <body>
-    @foreach (var post in Model.Posts)
+    @*@foreach (var post in Model.TagPosts.Posts)
     {
         <p>Posted By: @post.Author</p>
         <p>Title: @post.Title</p>
         <p>Body: @post.Body</p>
         <p>Category: @post.Category.Name</p>
         <p>Tags: @post.Tag.Name</p>
-        <p>Published On @post.PublishDate</p>
+        <p>Published On @post.PublishDate</p>*@
         @*<ol>
                 @foreach (var tag in Model.TagPost)
                 {
@@ -27,10 +27,10 @@
                     </li>
                 }
             </ol>*@
-        <a href="~/Post/Details/@post.Id">Details</a>
+        @*<a href="~/Post/Details/@post.Id">Details</a>
         <a href="/Post/Update">Update Post</a>
         <a href="/Post/Delete">Delete Post</a>
-    }
+    }*@
 
 </body>
 </html>

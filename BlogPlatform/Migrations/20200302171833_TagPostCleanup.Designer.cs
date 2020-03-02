@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BlogPlatform.Migrations
 {
     [DbContext(typeof(BlogContext))]
-    [Migration("20200302140159_SecondMigration")]
-    partial class SecondMigration
+    [Migration("20200302171833_TagPostCleanup")]
+    partial class TagPostCleanup
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -79,9 +79,6 @@ namespace BlogPlatform.Migrations
                     b.Property<DateTime>("PublishDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("TagId")
-                        .HasColumnType("int");
-
                     b.Property<string>("Title")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -89,8 +86,6 @@ namespace BlogPlatform.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("CategoryId");
-
-                    b.HasIndex("TagId");
 
                     b.ToTable("Posts");
 
@@ -101,8 +96,7 @@ namespace BlogPlatform.Migrations
                             Author = "Nabil",
                             Body = "This is my bike riding story.",
                             CategoryId = 1,
-                            PublishDate = new DateTime(2020, 3, 2, 9, 1, 58, 754, DateTimeKind.Local).AddTicks(6563),
-                            TagId = 101,
+                            PublishDate = new DateTime(2020, 3, 2, 12, 18, 32, 783, DateTimeKind.Local).AddTicks(9714),
                             Title = "My Bike Riding Hobby"
                         },
                         new
@@ -111,8 +105,7 @@ namespace BlogPlatform.Migrations
                             Author = "Tatyana",
                             Body = "This is my photography story.",
                             CategoryId = 2,
-                            PublishDate = new DateTime(2020, 3, 2, 9, 1, 58, 758, DateTimeKind.Local).AddTicks(560),
-                            TagId = 201,
+                            PublishDate = new DateTime(2020, 3, 2, 12, 18, 32, 789, DateTimeKind.Local).AddTicks(6327),
                             Title = "My Photography Hobby"
                         },
                         new
@@ -121,8 +114,7 @@ namespace BlogPlatform.Migrations
                             Author = "Blogger",
                             Body = "This is a blogger's blog about blogging.",
                             CategoryId = 3,
-                            PublishDate = new DateTime(2020, 3, 2, 9, 1, 58, 758, DateTimeKind.Local).AddTicks(622),
-                            TagId = 301,
+                            PublishDate = new DateTime(2020, 3, 2, 12, 18, 32, 789, DateTimeKind.Local).AddTicks(6476),
                             Title = "My Blogging Hobby"
                         },
                         new
@@ -131,8 +123,7 @@ namespace BlogPlatform.Migrations
                             Author = "Jeremy",
                             Body = "This is a blog about movies",
                             CategoryId = 4,
-                            PublishDate = new DateTime(2020, 3, 2, 9, 1, 58, 758, DateTimeKind.Local).AddTicks(629),
-                            TagId = 401,
+                            PublishDate = new DateTime(2020, 3, 2, 12, 18, 32, 789, DateTimeKind.Local).AddTicks(6488),
                             Title = "All About Movies"
                         });
                 });
@@ -315,12 +306,6 @@ namespace BlogPlatform.Migrations
                     b.HasOne("BlogPlatform.Models.Category", "Category")
                         .WithMany("Posts")
                         .HasForeignKey("CategoryId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("BlogPlatform.Models.Tag", "Tag")
-                        .WithMany("Posts")
-                        .HasForeignKey("TagId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });

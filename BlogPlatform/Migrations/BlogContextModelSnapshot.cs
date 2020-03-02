@@ -77,9 +77,6 @@ namespace BlogPlatform.Migrations
                     b.Property<DateTime>("PublishDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("TagId")
-                        .HasColumnType("int");
-
                     b.Property<string>("Title")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -87,8 +84,6 @@ namespace BlogPlatform.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("CategoryId");
-
-                    b.HasIndex("TagId");
 
                     b.ToTable("Posts");
 
@@ -98,9 +93,8 @@ namespace BlogPlatform.Migrations
                             Id = 1,
                             Author = "Nabil",
                             Body = "This is my bike riding story.",
-                            CategoryId = 0,
-                            PublishDate = new DateTime(2020, 3, 2, 9, 7, 4, 265, DateTimeKind.Local).AddTicks(3362),
-                            TagId = 0,
+                            CategoryId = 1,
+                            PublishDate = new DateTime(2020, 3, 2, 12, 18, 32, 783, DateTimeKind.Local).AddTicks(9714),
                             Title = "My Bike Riding Hobby"
                         },
                         new
@@ -108,9 +102,8 @@ namespace BlogPlatform.Migrations
                             Id = 2,
                             Author = "Tatyana",
                             Body = "This is my photography story.",
-                            CategoryId = 0,
-                            PublishDate = new DateTime(2020, 3, 2, 9, 7, 4, 268, DateTimeKind.Local).AddTicks(3846),
-                            TagId = 0,
+                            CategoryId = 2,
+                            PublishDate = new DateTime(2020, 3, 2, 12, 18, 32, 789, DateTimeKind.Local).AddTicks(6327),
                             Title = "My Photography Hobby"
                         },
                         new
@@ -118,9 +111,8 @@ namespace BlogPlatform.Migrations
                             Id = 3,
                             Author = "Blogger",
                             Body = "This is a blogger's blog about blogging.",
-                            CategoryId = 0,
-                            PublishDate = new DateTime(2020, 3, 2, 9, 7, 4, 268, DateTimeKind.Local).AddTicks(3911),
-                            TagId = 0,
+                            CategoryId = 3,
+                            PublishDate = new DateTime(2020, 3, 2, 12, 18, 32, 789, DateTimeKind.Local).AddTicks(6476),
                             Title = "My Blogging Hobby"
                         },
                         new
@@ -128,9 +120,8 @@ namespace BlogPlatform.Migrations
                             Id = 4,
                             Author = "Jeremy",
                             Body = "This is a blog about movies",
-                            CategoryId = 0,
-                            PublishDate = new DateTime(2020, 3, 2, 9, 7, 4, 268, DateTimeKind.Local).AddTicks(3918),
-                            TagId = 0,
+                            CategoryId = 4,
+                            PublishDate = new DateTime(2020, 3, 2, 12, 18, 32, 789, DateTimeKind.Local).AddTicks(6488),
                             Title = "All About Movies"
                         });
                 });
@@ -313,12 +304,6 @@ namespace BlogPlatform.Migrations
                     b.HasOne("BlogPlatform.Models.Category", "Category")
                         .WithMany("Posts")
                         .HasForeignKey("CategoryId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("BlogPlatform.Models.Tag", "Tag")
-                        .WithMany("Posts")
-                        .HasForeignKey("TagId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
