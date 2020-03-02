@@ -25,19 +25,21 @@
                 @*<p>Tags: @post.Tag.Name</p>*@
                 <p>Published On @post.PublishDate</p>
                 @*<ol>
-                    @foreach (var tag in Model.TagPost)
-                    {
-                        <li>
-                            @tag.Tag.Name
-                        </li>
-                    }
-                </ol>*@
+                        @foreach (var tag in Model.TagPost)
+                        {
+                            <li>
+                                @tag.Tag.Name
+                            </li>
+                        }
+                    </ol>*@
                 <a href="~/Post/Details/@post.Id">Details</a>
                 <a href="/Post/Update">Update Post</a>
                 <a href="/Post/Delete">Delete Post</a>
             </article>
         }
     </section>
-
+    <footer>
+        <p>&copy;HobbyBlogy 2020</p>
+    </footer>
 </body>
 </html>
