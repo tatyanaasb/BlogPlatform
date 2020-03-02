@@ -35,7 +35,7 @@ namespace BlogPlatform
                     Body = "This is my bike riding story.",
                     Author = "Nabil",
                     PublishDate = DateTime.Now,
-                    //CategoryId = 01,
+                    CategoryId = 01
                     //TagId = 101
                 },
 
@@ -46,7 +46,7 @@ namespace BlogPlatform
                     Body = "This is my photography story.",
                     Author = "Tatyana",
                     PublishDate = DateTime.Now,
-                    //CategoryId = 02,
+                    CategoryId = 02
                     //TagId = 201
                 },
 
@@ -57,7 +57,7 @@ namespace BlogPlatform
                     Body = "This is a blogger's blog about blogging.",
                     Author = "Blogger",
                     PublishDate = DateTime.Now,
-                    //CategoryId = 03,
+                    CategoryId = 03
                     //TagId = 301
                 },
 
@@ -68,7 +68,7 @@ namespace BlogPlatform
                     Body = "This is a blog about movies",
                     Author = "Jeremy",
                     PublishDate = DateTime.Now,
-                    //CategoryId = 04,
+                    CategoryId = 04
                     //TagId = 401
                 });
 
