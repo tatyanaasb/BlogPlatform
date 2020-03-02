@@ -1,4 +1,4 @@
-﻿@model IEnumerable<BlogPlatform.Models.Post>
+﻿@model BlogPlatform.Models.Post
 @{
     Layout = null;
 }
@@ -13,15 +13,23 @@
 <body>
     <h1>Individual Post Details></h1>
 
-    @foreach (var post in Model.ToList())
-    {
-        <p>@post.Author</p>
-        <p>@post.Title</p>
-        <p>@post.Body</p>
-        <p>@post.Category.Name</p>
-        @*<p>Tag: @post.Tag.Name</p>*@
-        <p>Published On @post.PublishDate</p>
-    }
+    @*@foreach (var post in Model.ToList())
+        {
+            <p>@post.Author</p>
+            <p>@post.Title</p>
+            <p>@post.Body</p>
+            <p>@post.Category.Name</p>
+            <p>Published On @post.PublishDate</p>
+        }*@
+    <ol>
+        @foreach (var tag in Model.TagPosts)
+        {
+            <li>
+                @tag.Tag.Name
+            </li>
+        }
+    </ol>
+
 
     <a href="/Home/Index"><button>Return Home</button></a>
 </body>
